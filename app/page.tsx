@@ -1,8 +1,20 @@
-import { Counter } from "@/app/counter";
+import Image from "next/image";
+import gambar1 from "@/public/gambar1.png";
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <Counter/>
-    </div>
+    <>
+      <h1>Home</h1>
+      <div className="relative size-72 rounded-full overflow-hidden">
+        <Image
+          src={gambar1}
+          alt="gambar1"
+          fill
+          className="object-cover"
+          loading="eager"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAABAgMAAABrkIxgAAAACVBMVEXp6gfk5Abb2wa92N0wAAAAC0lEQVQI12NQYQAAAEsAJUHl9KcAAAAASUVORK5CYII="
+        />
+      </div>
+    </>
   );
 }
