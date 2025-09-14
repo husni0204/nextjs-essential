@@ -1,12 +1,17 @@
 import Link from "next/link";
 import { Post } from "@/app/types/Post";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Posts Page",
+};
 
 const getPosts = async (): Promise<Post[]> => {
+  // await new Promise((resolve) => setTimeout(resolve, 3000)); // Simulate a 3-second delay
+
   const res = await fetch("http://localhost:3001/posts");
   const posts = await res.json();
   return posts;
-
-  console.log(posts);
 };
 
 const PostsPage = async () => {

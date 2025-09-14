@@ -1,5 +1,11 @@
 import Image from "next/image";
 import gambar1 from "@/public/gambar1.png";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home Page",
+};
+
 export default function Home() {
   return (
     <>

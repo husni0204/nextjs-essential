@@ -1,11 +1,20 @@
 "use server";
 
-export async function createComment(prevData: any, formData: FormData) {
+import { CommentFromState } from "@/app/types/CommentFromState";
+
+export async function createComment(
+  prevData: CommentFromState,
+  formData: FormData
+): Promise<CommentFromState> {
   const comment = formData.get("comment") as string;
 
   if (!comment) {
     return { error: "Comment is required" };
   }
+
+  return {
+    success: true,
+  };
 }
 
 export async function createLike(postId: string) {

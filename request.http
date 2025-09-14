@@ -1,0 +1,23 @@
+#get 
+GET  http://localhost:3000/api/user/1 
+
+###
+
+#post 
+POST http://localhost:3000/api/user/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Husni",
+    "username": "husni123"
+}
+
+###
+
+#put 
+PUT http://localhost:3000/api/user/ 
+
+###
+
+#get query params 
+GET  http://localhost:3000/api/user?query=husni
